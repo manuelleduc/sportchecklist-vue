@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div v-for="item in items" :key="item.type">
-      <h2>{{ item.type }}</h2>
+      <h2>{{ $t(item.type) }}</h2>
     </div>
   </div>
 </template>

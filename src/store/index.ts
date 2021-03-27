@@ -7,13 +7,13 @@ export default new Vuex.Store({
   state: {
     items: [
       {
-        type: 'Bike',
+        type: 'bike',
         checklist: [
           'Loaded GPS'
         ]
       },
       {
-        type: 'Cyclist',
+        type: 'cyclist',
         checklist: [
           'Helmet'
         ]
