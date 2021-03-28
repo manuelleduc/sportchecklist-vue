@@ -1,6 +1,11 @@
 export default {
   en: {
     bike: 'Bike',
-    cyclist: 'Cyclist'
+    cyclist: 'Cyclist',
+    item: {
+      checklist: {
+        empty: 'The checklist is empty.'
+      }
+    }
   }
 }

@@ -1,4 +1,9 @@
 export default {
   bike: 'Vélo',
-  cyclist: 'Cycliste'
+  cyclist: 'Cycliste',
+  item: {
+    checklist: {
+      empty: 'La liste de contrôle est vide.'
+    }
+  }
 }

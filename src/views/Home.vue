@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div v-for="item in items" :key="item.type">
-      <h2>{{ $t(item.type) }}</h2>
+      <Checklist :item="item"/>
     </div>
   </div>
 </template>
@@ -9,8 +9,10 @@
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
 import {mapState} from "vuex";
+import Checklist from "@/views/Checklist.vue";
 
 @Component({
+  components: {Checklist},
   computed: {
     ...mapState(['items'])
   }
