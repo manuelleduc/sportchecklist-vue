@@ -5,7 +5,7 @@
       <li v-for="(checkItem, index) in item.checklist" :key="`CheckItem${index}`">
         <label>
           <input type="checkbox"/>
-          {{ checkItem }}
+          {{ translate(checkItem) }}
         </label>
       </li>
     </ul>
@@ -15,11 +15,12 @@
   </div>
 </template>
 <script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+import {Component, Mixins, Prop} from "vue-property-decorator";
 import {Item} from "@/store";
+import TranslationMixin from "@/i18n/translationMixin";
 
 @Component
-export default class Checklist extends Vue {
+export default class Checklist extends Mixins(TranslationMixin) {
   @Prop({required: true}) item!: Item
 }
 </script>

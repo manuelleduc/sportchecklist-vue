@@ -3,9 +3,11 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+export type ChecklistElement<S> = Record<string, S>
+
 export interface Item {
   type: string,
-  checklist: Array<string>,
+  checklist: Array<ChecklistElement<string>>,
 }
 
 export interface State {
@@ -16,14 +18,12 @@ const state: State = {
   items: [
     {
       type: 'bike',
-      checklist: [
-        'Loaded GPS'
-      ]
+      checklist: [{'en': 'Loaded GPS', 'fr': 'GPS chargé'}]
     },
     {
       type: 'cyclist',
       checklist: [
-        'Helmet'
+        {'en': 'Helmet'}
       ]
     },
     {
